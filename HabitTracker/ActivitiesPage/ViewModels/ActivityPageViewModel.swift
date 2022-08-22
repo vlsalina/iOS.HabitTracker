@@ -13,4 +13,13 @@ class ActivityPageViewModel: ObservableObject {
     func addNewActivity(activity: ActivityModel) {
         activities.append(activity)
     }
+    
+    func testData() {
+        activities = [
+            ActivityModel(title: "title", description: "description", completed: 0),
+            ActivityModel(title: "title", description: "description", completed: 0),
+            ActivityModel(title: "title", description: "description", completed: 0),
+            ActivityModel(title: "title", description: "description", completed: 0),
+        ]
+    }
 }

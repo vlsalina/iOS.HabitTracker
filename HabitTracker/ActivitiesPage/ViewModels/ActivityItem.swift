@@ -12,8 +12,12 @@ struct ActivityItem: View {
     
     var body: some View {
         VStack {
-            Text(activity!.title)
+            HStack {
+                Text(activity!.title)
+                Spacer()
+            }
         }
+        .padding([.bottom], 5)
     }
 }
 

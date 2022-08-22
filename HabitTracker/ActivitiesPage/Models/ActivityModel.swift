@@ -13,7 +13,7 @@ class ActivityModel: Codable, Identifiable {
     var description: String
     var completed: Int
     
-    init(id: UUID, title: String, description: String, completed: Int) {
+    init(title: String, description: String, completed: Int) {
         self.id = UUID()
         self.title = title
         self.description = description

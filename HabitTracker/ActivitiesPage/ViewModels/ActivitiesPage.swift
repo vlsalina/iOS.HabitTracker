@@ -9,10 +9,15 @@ import SwiftUI
 
 struct ActivitiesPage: View {
     @StateObject var activityPageVM = ActivityPageViewModel()
+    @State var showNextView = false
+    
     
     var body: some View {
         NavigationView {
             VStack {
+                NavigationLink(destination: AddNewActivityPage(), isActive: $showNextView) {
+                    EmptyView()
+                }
                 ScrollView {
                     LazyVStack {
                         ForEach(activityPageVM.activities) { activity in
@@ -21,7 +26,19 @@ struct ActivitiesPage: View {
                     }
                 }
             }
+            .padding(.horizontal)
             .navigationTitle("Activities")
+            .navigationBarItems(
+                trailing:
+                    Button(action: {
+                        showNextView = true
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                    }
+            )
+            .onAppear() {
+                activityPageVM.testData()
+            }
         }
     }
 }
