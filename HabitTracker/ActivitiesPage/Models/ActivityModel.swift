@@ -19,13 +19,4 @@ class ActivityModel: Codable, Identifiable {
         self.description = description
         self.completed = 0
     }
-    
-    func incrementCompleted() {
-        completed += 1
-    }
-    
-    func decrementCompleted() {
-        completed -= 1
-    }
-    
 }

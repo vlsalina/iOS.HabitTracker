@@ -11,6 +11,7 @@ struct ActivitiesPage: View {
     @StateObject var activityPageVM = ActivityPageViewModel()
     @State var showNextView = false
     @State var showDetails = false
+    @State var current: ActivityModel?
     
     
     var body: some View {
@@ -19,13 +20,14 @@ struct ActivitiesPage: View {
                 NavigationLink(destination: AddNewActivityPage().environmentObject(activityPageVM), isActive: $showNextView) {
                     EmptyView()
                 }
-                NavigationLink(destination: ActivityCounterCompletedPage().environmentObject(activityPageVM), isActive: $showDetails) {
+                NavigationLink(destination: ActivityCounterCompletedPage(activity: current).environmentObject(activityPageVM), isActive: $showDetails) {
                     EmptyView()
                 }
                 ScrollView {
                     LazyVStack {
                         ForEach(activityPageVM.activities) { activity in
                             Button(action: {
+                                current = activity
                                 showDetails = true
                             }) {
                                 ActivityItem(activity: activity)

@@ -30,8 +30,8 @@
 		617A2DD828B30956003E8EBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		617A2DE328B30AA4003E8EBF /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		617A2DE728B3113A003E8EBF /* ActivityPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPageViewModel.swift; sourceTree = "<group>"; };
-		617A2DE928B31279003E8EBF /* ActivitiesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivitiesPage.swift; path = HabitTracker/ActivitiesPage/ViewModels/ActivitiesPage.swift; sourceTree = SOURCE_ROOT; };
-		617A2DEB28B3136C003E8EBF /* ActivityItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityItem.swift; path = HabitTracker/ActivitiesPage/ViewModels/ActivityItem.swift; sourceTree = SOURCE_ROOT; };
+		617A2DE928B31279003E8EBF /* ActivitiesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivitiesPage.swift; path = HabitTracker/ActivitiesPage/Views/ActivitiesPage.swift; sourceTree = SOURCE_ROOT; };
+		617A2DEB28B3136C003E8EBF /* ActivityItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityItem.swift; path = HabitTracker/ActivitiesPage/Views/ActivityItem.swift; sourceTree = SOURCE_ROOT; };
 		617A2DF128B33D30003E8EBF /* AddNewActivityPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +86,15 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		613120F728B463670055D9A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				617A2DE928B31279003E8EBF /* ActivitiesPage.swift */,
+				617A2DEB28B3136C003E8EBF /* ActivityItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		617A2DC528B30955003E8EBF = {
 			isa = PBXGroup;
 			children = (
@@ -127,20 +136,11 @@
 		617A2DDF28B30A4C003E8EBF /* ActivitiesPage */ = {
 			isa = PBXGroup;
 			children = (
+				613120F728B463670055D9A2 /* Views */,
 				617A2DE228B30A89003E8EBF /* ViewModels */,
 				617A2DE128B30A82003E8EBF /* Models */,
-				617A2DE028B30A7D003E8EBF /* Views */,
 			);
 			path = ActivitiesPage;
-			sourceTree = "<group>";
-		};
-		617A2DE028B30A7D003E8EBF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				617A2DE928B31279003E8EBF /* ActivitiesPage.swift */,
-				617A2DEB28B3136C003E8EBF /* ActivityItem.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		617A2DE128B30A82003E8EBF /* Models */ = {
