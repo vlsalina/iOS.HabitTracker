@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		613120F028B459760055D9A2 /* ActivityPageHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613120EF28B459760055D9A2 /* ActivityPageHelpers.swift */; };
 		617A2DD228B30955003E8EBF /* HabitTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2DD128B30955003E8EBF /* HabitTrackerApp.swift */; };
 		617A2DD428B30955003E8EBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A2DD328B30955003E8EBF /* ContentView.swift */; };
 		617A2DD628B30956003E8EBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617A2DD528B30956003E8EBF /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		613120EF28B459760055D9A2 /* ActivityPageHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPageHelpers.swift; sourceTree = "<group>"; };
 		617A2DCE28B30955003E8EBF /* HabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		617A2DD128B30955003E8EBF /* HabitTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerApp.swift; sourceTree = "<group>"; };
 		617A2DD328B30955003E8EBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		613120EE28B459630055D9A2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				613120EF28B459760055D9A2 /* ActivityPageHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		617A2DC528B30955003E8EBF = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		617A2DED28B33D04003E8EBF /* AddNewActivityPage */ = {
 			isa = PBXGroup;
 			children = (
+				613120EE28B459630055D9A2 /* Helpers */,
 				617A2DF028B33D1C003E8EBF /* ViewModels */,
 				617A2DEF28B33D18003E8EBF /* Models */,
 				617A2DEE28B33D13003E8EBF /* Views */,
@@ -219,6 +230,7 @@
 				617A2DEA28B31279003E8EBF /* ActivitiesPage.swift in Sources */,
 				617A2DE828B3113A003E8EBF /* ActivityPageViewModel.swift in Sources */,
 				617A2DF228B33D30003E8EBF /* AddNewActivityPage.swift in Sources */,
+				613120F028B459760055D9A2 /* ActivityPageHelpers.swift in Sources */,
 				617A2DD428B30955003E8EBF /* ContentView.swift in Sources */,
 				617A2DEC28B3136C003E8EBF /* ActivityItem.swift in Sources */,
 				617A2DD228B30955003E8EBF /* HabitTrackerApp.swift in Sources */,

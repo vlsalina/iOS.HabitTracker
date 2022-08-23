@@ -15,7 +15,7 @@ struct ActivitiesPage: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: AddNewActivityPage(), isActive: $showNextView) {
+                NavigationLink(destination: AddNewActivityPage().environmentObject(activityPageVM), isActive: $showNextView) {
                     EmptyView()
                 }
                 ScrollView {
@@ -36,9 +36,6 @@ struct ActivitiesPage: View {
                         Image(systemName: "plus.circle.fill")
                     }
             )
-            .onAppear() {
-                activityPageVM.testData()
-            }
         }
     }
 }
