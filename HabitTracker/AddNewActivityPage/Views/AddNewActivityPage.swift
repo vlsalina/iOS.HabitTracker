@@ -10,8 +10,10 @@ import SwiftUI
 struct AddNewActivityPage: View {
     
     @EnvironmentObject var activityPageVM: ActivityPageViewModel
+    @Environment(\.dismiss) var dismiss
     @State var title = ""
     @State var description = ""
+    @State var showAlert = false
     
     init() {
         UITextView.appearance().backgroundColor = .clear
@@ -40,15 +42,24 @@ struct AddNewActivityPage: View {
             Section {
                 Button(action: {
                     let newActivity = ActivityModel(title: title, description: description, completed: 0)
-                    print(newActivity.title)
-                    activityPageVM.addNewActivity(activity: newActivity)
+                    showAlert = activityPageVM.addNewActivity(activity: newActivity)
+                    if (!showAlert) {
+                        dismiss()
+                    }
                 }) {
                     Text("Add New Activity")
                 }
+                .frame(maxWidth: .infinity)
             }
-            
         }
         .navigationTitle("Create New Activity")
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Invalid details"),
+                message: Text("Please provide a valid title and description"),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
 }
 

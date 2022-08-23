@@ -10,8 +10,13 @@ import Foundation
 class ActivityPageViewModel: ObservableObject {
     @Published private(set) var activities = [ActivityModel]()
     
-    func addNewActivity(activity: ActivityModel) {
-        activities.append(activity)
+    func addNewActivity(activity: ActivityModel) -> Bool {
+        if (validateActivity(activity: activity)) {
+            activities.append(activity)
+            return false
+        }
+        
+        return true
     }
     
     func testData() {
