@@ -10,6 +10,7 @@ import SwiftUI
 struct ActivitiesPage: View {
     @StateObject var activityPageVM = ActivityPageViewModel()
     @State var showNextView = false
+    @State var showDetails = false
     
     
     var body: some View {
@@ -18,10 +19,17 @@ struct ActivitiesPage: View {
                 NavigationLink(destination: AddNewActivityPage().environmentObject(activityPageVM), isActive: $showNextView) {
                     EmptyView()
                 }
+                NavigationLink(destination: ActivityCounterCompletedPage().environmentObject(activityPageVM), isActive: $showDetails) {
+                    EmptyView()
+                }
                 ScrollView {
                     LazyVStack {
                         ForEach(activityPageVM.activities) { activity in
-                            ActivityItem(activity: activity)
+                            Button(action: {
+                                showDetails = true
+                            }) {
+                                ActivityItem(activity: activity)
+                            }
                         }
                     }
                 }
