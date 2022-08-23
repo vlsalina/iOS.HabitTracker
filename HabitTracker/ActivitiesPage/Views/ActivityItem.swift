@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ActivityItem: View {
+    @EnvironmentObject var activityPageVM: ActivityPageViewModel
     var activity: ActivityModel?
     
     var body: some View {
@@ -15,6 +16,11 @@ struct ActivityItem: View {
             HStack {
                 Text(activity!.title)
                 Spacer()
+                Button(action: {
+                    activityPageVM.deleteActivity(id: activity!.id)
+                }) {
+                    Image(systemName: "minus.circle.fill")
+                }
             }
         }
         .padding([.bottom], 5)
@@ -24,5 +30,6 @@ struct ActivityItem: View {
 struct ActivityItem_Previews: PreviewProvider {
     static var previews: some View {
         ActivityItem()
+            .environmentObject(ActivityPageViewModel())
     }
 }

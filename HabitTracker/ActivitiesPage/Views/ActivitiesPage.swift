@@ -31,6 +31,7 @@ struct ActivitiesPage: View {
                                 showDetails = true
                             }) {
                                 ActivityItem(activity: activity)
+                                    .environmentObject(activityPageVM)
                             }
                         }
                     }

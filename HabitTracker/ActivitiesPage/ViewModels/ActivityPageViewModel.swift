@@ -24,6 +24,12 @@ class ActivityPageViewModel: ObservableObject {
         }
     }
     
+    func deleteActivity(id: UUID) {
+        activities = activities.filter { activity in
+            return activity.id != id
+        }
+    }
+    
     func incrementCounter(id: UUID) {
         if let activity = activities.first(where: { $0.id == id }) {
             activity.completed += 1
